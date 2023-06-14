@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewsControllers.ControllerListaBudget">
+   <children>
+      <Label text="Orçamento">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" top="5.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#onBtNovo" text="Novo" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewBudget" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tableCollumnId" prefWidth="43.0" text="Id" />
+          <TableColumn fx:id="tableCollumnClienteNome" prefWidth="96.0" text="Cliente" />
+            <TableColumn fx:id="tableCollumnProdutoNome" prefWidth="114.0" text="Produto" />
+            <TableColumn fx:id="tableCollumnQuantidade" prefWidth="60.0" text="QTO" />
+            <TableColumn fx:id="tableCollumnValor_unitario" prefWidth="75.0" text="Valor" />
+            <TableColumn fx:id="tableCollumnValor_Total" prefWidth="86.0" text="Total" />
+            <TableColumn fx:id="tableCollumnEditar" prefWidth="65.0" />
+            <TableColumn fx:id="tableCollumnRemove" prefWidth="78.0" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

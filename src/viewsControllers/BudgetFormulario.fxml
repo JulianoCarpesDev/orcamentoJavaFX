@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="276.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewsControllers.ControllerFormularioBudget">
+   <children>
+      <GridPane prefHeight="223.0" prefWidth="688.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="116.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="126.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="id" />
+            <Label text="Cliente" GridPane.rowIndex="1" />
+            <Label text="Produto" GridPane.rowIndex="2" />
+            <Label text="Quantidade" GridPane.rowIndex="3" />
+            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtQuantidade" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="labelErrorId" textFill="#f80a0a" GridPane.columnIndex="2" />
+            <Label fx:id="labelErroClienteNome" textFill="#e40d0d" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="labelErroProdutoNome" textFill="#e40606" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="labelErroQuantidade" textFill="#eb0909" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btnSalva" text="Salvar" />
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#btnCancela" text="Cancelar" />
+               </children>
+            </HBox>
+            <ComboBox fx:id="comboBoxClientes" prefWidth="150.0" promptText="Clientes" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="comboBoxProdutos" prefWidth="150.0" promptText="Produtos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
